@@ -1,0 +1,724 @@
+definitions:
+  auth.AuthResponse:
+    properties:
+      token:
+        type: string
+    type: object
+  auth.SignIn:
+    properties:
+      password:
+        type: string
+      username:
+        type: string
+    type: object
+  blog.AdminCreateRequest:
+    properties:
+      author:
+        type: string
+      content:
+        type: string
+      title:
+        type: string
+    type: object
+  blog.AdminCreateResponseSwagger:
+    properties:
+      author:
+        type: string
+      content:
+        type: string
+      id:
+        type: string
+      title:
+        type: string
+    type: object
+  blog.AdminDetailResponseSwagger:
+    properties:
+      author:
+        type: string
+      content:
+        type: string
+      id:
+        type: string
+      title:
+        type: string
+    type: object
+  blog.AdminGetListResponse:
+    properties:
+      author:
+        type: string
+      content:
+        type: string
+      id:
+        type: string
+      title:
+        type: string
+    type: object
+  blog.AdminUpdateRequest:
+    properties:
+      author:
+        type: string
+      content:
+        type: string
+      id:
+        type: string
+      title:
+        type: string
+    type: object
+  new.AdminCreateRequest:
+    properties:
+      content:
+        type: string
+      source:
+        type: string
+      title:
+        type: string
+    type: object
+  new.AdminCreateResponseSwagger:
+    properties:
+      content:
+        type: string
+      id:
+        type: string
+      source:
+        type: string
+      title:
+        type: string
+    type: object
+  new.AdminDetailResponseSwagger:
+    properties:
+      content:
+        type: string
+      id:
+        type: string
+      source:
+        type: string
+      title:
+        type: string
+    type: object
+  new.AdminGetListResponse:
+    properties:
+      content:
+        type: string
+      id:
+        type: string
+      source:
+        type: string
+      title:
+        type: string
+    type: object
+  new.AdminUpdateRequest:
+    properties:
+      content:
+        type: string
+      id:
+        type: string
+      source:
+        type: string
+      title:
+        type: string
+    type: object
+  response.StatusOk:
+    properties:
+      massage:
+        type: boolean
+    type: object
+  user.AdminCreateRequest:
+    properties:
+      password:
+        type: string
+      status:
+        type: boolean
+      username:
+        type: string
+    type: object
+  user.AdminCreateResponseSwagger:
+    properties:
+      id:
+        type: string
+      password:
+        type: string
+      role:
+        type: string
+      status:
+        type: boolean
+      username:
+        type: string
+    type: object
+  user.AdminDetailResponseSwagger:
+    properties:
+      id:
+        type: string
+      role:
+        type: string
+      status:
+        type: boolean
+      username:
+        type: string
+    type: object
+  user.AdminGetListResponse:
+    properties:
+      id:
+        type: string
+      role:
+        type: string
+      status:
+        type: boolean
+      username:
+        type: string
+    type: object
+  user.AdminUpdateRequest:
+    properties:
+      id:
+        type: string
+      role:
+        type: string
+      status:
+        type: boolean
+      username:
+        type: string
+    type: object
+info:
+  contact:
+    name: Shaxboz
+  description: This is an auto-generated API Docs.
+  termsOfService: http://swagger.io/terms/
+  title: API
+  version: "1"
+paths:
+  /api/v1/admin/blog/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Blog
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.StatusOk'
+        "400":
+          description: Invalid argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: Delete Blog
+      tags:
+      - Blog
+    get:
+      consumes:
+      - application/json
+      description: Get Blog ById
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/blog.AdminDetailResponseSwagger'
+        "400":
+          description: Invalid argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: Get Blog ById
+      tags:
+      - Blog
+    put:
+      consumes:
+      - application/json
+      description: Update Blog
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: blog
+        in: body
+        name: blog
+        required: true
+        schema:
+          $ref: '#/definitions/blog.AdminUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.StatusOk'
+        "400":
+          description: Invalid argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: Update Blog
+      tags:
+      - Blog
+  /api/v1/admin/blog/create:
+    post:
+      consumes:
+      - application/json
+      description: Create Blog
+      parameters:
+      - description: blog
+        in: body
+        name: blog
+        required: true
+        schema:
+          $ref: '#/definitions/blog.AdminCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/blog.AdminCreateResponseSwagger'
+        "400":
+          description: Invalid argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: Blog
+      tags:
+      - Blog
+  /api/v1/admin/blog/list:
+    get:
+      consumes:
+      - application/json
+      description: Get Blog List
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - description: title
+        in: query
+        name: title
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/blog.AdminGetListResponse'
+        "400":
+          description: Invalid argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: Get Blog List
+      tags:
+      - Blog
+  /api/v1/admin/news/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete New
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.StatusOk'
+        "400":
+          description: Invalid argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: Delete New
+      tags:
+      - New
+    get:
+      consumes:
+      - application/json
+      description: Get New ById
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/new.AdminDetailResponseSwagger'
+        "400":
+          description: Invalid argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: Get New ById
+      tags:
+      - New
+    put:
+      consumes:
+      - application/json
+      description: Update New
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: new
+        in: body
+        name: new
+        required: true
+        schema:
+          $ref: '#/definitions/new.AdminUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.StatusOk'
+        "400":
+          description: Invalid argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: Update New
+      tags:
+      - New
+  /api/v1/admin/news/create:
+    post:
+      consumes:
+      - application/json
+      description: Create New
+      parameters:
+      - description: new
+        in: body
+        name: new
+        required: true
+        schema:
+          $ref: '#/definitions/new.AdminCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/new.AdminCreateResponseSwagger'
+        "400":
+          description: Invalid argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: New
+      tags:
+      - New
+  /api/v1/admin/news/list:
+    get:
+      consumes:
+      - application/json
+      description: Get New List
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - description: title
+        in: query
+        name: title
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/new.AdminGetListResponse'
+        "400":
+          description: Invalid argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: Get New List
+      tags:
+      - New
+  /api/v1/admin/user/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete User
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.StatusOk'
+        "400":
+          description: Invalid argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: Delete User
+      tags:
+      - User
+    get:
+      consumes:
+      - application/json
+      description: Get User ById
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/user.AdminDetailResponseSwagger'
+        "400":
+          description: Invalid argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: Get User ById
+      tags:
+      - User
+    put:
+      consumes:
+      - application/json
+      description: Update User
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: user
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/user.AdminUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.StatusOk'
+        "400":
+          description: Invalid argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: Update User
+      tags:
+      - User
+  /api/v1/admin/user/create:
+    post:
+      consumes:
+      - application/json
+      description: Create User
+      parameters:
+      - description: user
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/user.AdminCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/user.AdminCreateResponseSwagger'
+        "400":
+          description: Invalid argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: User
+      tags:
+      - User
+  /api/v1/admin/user/list:
+    get:
+      consumes:
+      - application/json
+      description: Get User List
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - description: username
+        in: query
+        name: username
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/user.AdminGetListResponse'
+        "400":
+          description: Invalid argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: Get User List
+      tags:
+      - User
+  /api/v1/user/sign-in:
+    post:
+      consumes:
+      - application/json
+      description: Create Author
+      parameters:
+      - description: CreateAuthorRequestBody
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/auth.SignIn'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/auth.AuthResponse'
+        "400":
+          description: Invalid argument
+          schema:
+            type: string
+        "500":
+          description: Server Error
+          schema:
+            type: string
+      summary: Sign In
+      tags:
+      - auth
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

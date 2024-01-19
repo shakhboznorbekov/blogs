@@ -7,10 +7,10 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"shifo-website-backend/internal/pkg"
-	user2 "shifo-website-backend/internal/repository/postgres/user"
-	"shifo-website-backend/internal/service/request"
-	"shifo-website-backend/internal/service/response"
+	"github.com/blogs/internal/pkg"
+	user2 "github.com/blogs/internal/repository/postgres/user"
+	"github.com/blogs/internal/service/request"
+	"github.com/blogs/internal/service/response"
 )
 
 type Controller struct {

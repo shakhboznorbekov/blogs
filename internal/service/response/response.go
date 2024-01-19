@@ -1,7 +1,7 @@
 package response
 
 import (
-	"gitlab.com/blogs/internal/pkg"
+	"github.com/blogs/internal/pkg"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

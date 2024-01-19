@@ -1,0 +1,9 @@
+base_url: "http://blogs.uz"
+default_lang: "uz"
+db_username: "admin"
+db_password: "2711"
+db_name: "blogs"
+db_port: "5432"
+port: "8080"
+jwt_key: "blogs-website-backend"
+

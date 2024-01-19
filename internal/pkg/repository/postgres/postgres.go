@@ -1,12 +1,12 @@
 package postgres
 
 import (
-	"blogs/internal/entity"
-	"blogs/internal/pkg"
 	"context"
 	"database/sql"
 	"errors"
 	"fmt"
+	"github.com/blogs/internal/entity"
+	"github.com/blogs/internal/pkg"
 	"github.com/uptrace/bun"
 	"github.com/uptrace/bun/dialect/pgdialect"
 	"github.com/uptrace/bun/driver/pgdriver"

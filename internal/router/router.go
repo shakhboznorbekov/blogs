@@ -1,7 +1,10 @@
 package router
 
 import (
+	_ "github.com/blogs/internal/controller/docs"
 	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
 type Auth interface {

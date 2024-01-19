@@ -7,10 +7,10 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"gitlab.com/blogs/internal/pkg"
-	blog2 "gitlab.com/blogs/internal/repository/postgres/blog"
-	"gitlab.com/blogs/internal/service/request"
-	"gitlab.com/blogs/internal/service/response"
+	"github.com/blogs/internal/pkg"
+	blog2 "github.com/blogs/internal/repository/postgres/blog"
+	"github.com/blogs/internal/service/request"
+	"github.com/blogs/internal/service/response"
 )
 
 type Controller struct {
@@ -31,7 +31,7 @@ func NewController(blog Blog) *Controller {
 // @Param offset query integer false "offset"
 // @Param limit query integer false "limit"
 // @Param title query string false "title"
-// @Success 200 {object} blogs.AdminGetListResponse
+// @Success 200 {object} blog.AdminGetListResponse
 // @Response 400 {object} string "Invalid argument"
 // @Failure 500 {object} string "Server Error"
 // @Router /api/v1/admin/blog/list [GET]
@@ -92,7 +92,7 @@ func (cl Controller) AdminGetBlogList(c *gin.Context) {
 // @Accept json
 // @Produce json
 // @Param id path string true "id"
-// @Success 200 {object} blogs.AdminDetailResponseSwagger
+// @Success 200 {object} blog.AdminDetailResponseSwagger
 // @Response 400 {object} string "Invalid argument"
 // @Failure 500 {object} string "Server Error"
 // @Router /api/v1/admin/blog/{id} [GET]
@@ -125,8 +125,8 @@ func (cl Controller) AdminGetBlogDetail(c *gin.Context) {
 // @Tags Blog
 // @Accept json
 // @Produce json
-// @Param blog body blogs.AdminCreateRequest true "blog"
-// @Success 200 {object} blogs.AdminCreateResponseSwagger
+// @Param blog body blog.AdminCreateRequest true "blog"
+// @Success 200 {object} blog.AdminCreateResponseSwagger
 // @Response 400 {object} string "Invalid argument"
 // @Failure 500 {object} string "Server Error"
 // @Router /api/v1/admin/blog/create [POST]

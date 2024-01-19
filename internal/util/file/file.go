@@ -3,7 +3,7 @@ package file
 import (
 	"context"
 	"errors"
-	"gitlab.com/blogs/internal/pkg"
+	"github.com/blogs/internal/pkg"
 	"io"
 	"log"
 	"math/rand"

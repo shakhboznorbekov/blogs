@@ -11,7 +11,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"gitlab.com/blogs/internal/pkg"
+	"github.com/blogs/internal/pkg"
 )
 
 func BindFunc(c *gin.Context, data interface{}, requiredFields ...string) *pkg.Error {

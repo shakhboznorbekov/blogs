@@ -3,9 +3,9 @@ package user
 import (
 	"context"
 
-	"shifo-website-backend/internal/auth"
-	"shifo-website-backend/internal/pkg"
-	"shifo-website-backend/internal/repository/postgres/user"
+	"github.com/blogs/internal/auth"
+	"github.com/blogs/internal/pkg"
+	"github.com/blogs/internal/repository/postgres/user"
 )
 
 type User interface {

@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
-	"gitlab.com/admin_service_shifo/internal/pkg"
+	"github.com/blogs/internal/pkg"
 	"net/http"
 	"os"
 	"strings"

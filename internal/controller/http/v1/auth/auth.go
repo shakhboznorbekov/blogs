@@ -1,9 +1,9 @@
 package auth
 
 import (
-	auth_service "geedbro-website-backend/internal/auth"
-	"geedbro-website-backend/internal/service/hash"
-	"geedbro-website-backend/internal/service/request"
+	auth_service "github.com/blogs/internal/auth"
+	"github.com/blogs/internal/service/hash"
+	"github.com/blogs/internal/service/request"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

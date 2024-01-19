@@ -3,15 +3,15 @@ package blog
 import (
 	"context"
 	"fmt"
-	"internal/entity"
+	"github.com/blogs/internal/entity"
 	"net/http"
 	"strings"
 	"time"
 
 	"github.com/google/uuid"
 
-	"gitlab.com/blogs/internal/pkg"
-	"gitlab.com/blogs/internal/pkg/repository/postgres"
+	"github.com/blogs/internal/pkg"
+	"github.com/blogs/internal/pkg/repository/postgres"
 )
 
 type Repository struct {

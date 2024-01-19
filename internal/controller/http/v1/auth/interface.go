@@ -2,10 +2,10 @@ package auth
 
 import (
 	"context"
-	"geedbro-website-backend/internal/auth"
-	"geedbro-website-backend/internal/entity"
-	"geedbro-website-backend/internal/pkg"
-	"geedbro-website-backend/internal/repository/postgres/user"
+	"github.com/blogs/internal/auth"
+	"github.com/blogs/internal/entity"
+	"github.com/blogs/internal/pkg"
+	"github.com/blogs/internal/repository/postgres/user"
 )
 
 type Auth interface {

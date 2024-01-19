@@ -9,10 +9,10 @@ import (
 
 	"github.com/google/uuid"
 
-	"gitlab.com/admin_service_shifo/internal/entity"
-	"gitlab.com/admin_service_shifo/internal/pkg"
-	"gitlab.com/admin_service_shifo/internal/pkg/repository/postgres"
-	"gitlab.com/admin_service_shifo/internal/service/hash"
+	"github.com/blogs/internal/entity"
+	"github.com/blogs/internal/pkg"
+	"github.com/blogs/internal/pkg/repository/postgres"
+	"github.com/blogs/internal/service/hash"
 )
 
 type Repository struct {

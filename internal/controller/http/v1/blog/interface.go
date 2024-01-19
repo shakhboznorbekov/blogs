@@ -2,9 +2,9 @@ package blog
 
 import (
 	"context"
-	"gitlab.com/blogs/internal/repository/postgres/blog"
+	"github.com/blogs/internal/repository/postgres/blog"
 
-	"gitlab.com/blogs/internal/pkg"
+	"github.com/blogs/internal/pkg"
 )
 
 type Blog interface {

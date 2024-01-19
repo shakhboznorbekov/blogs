@@ -7,10 +7,10 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"gitlab.com/blogs/internal/pkg"
-	new2 "gitlab.com/blogs/internal/repository/postgres/new"
-	"gitlab.com/blogs/internal/service/request"
-	"gitlab.com/blogs/internal/service/response"
+	"github.com/blogs/internal/pkg"
+	new2 "github.com/blogs/internal/repository/postgres/new"
+	"github.com/blogs/internal/service/request"
+	"github.com/blogs/internal/service/response"
 )
 
 type Controller struct {

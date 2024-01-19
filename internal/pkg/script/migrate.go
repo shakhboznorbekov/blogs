@@ -1,8 +1,8 @@
 package script
 
 import (
-	"blogs/internal/pkg/repository/postgres"
 	"fmt"
+	"github.com/blogs/internal/pkg/repository/postgres"
 	_ "github.com/golang-migrate/migrate/v4/database/postgres"
 	_ "github.com/golang-migrate/migrate/v4/source/file"
 	"github.com/pkg/errors"

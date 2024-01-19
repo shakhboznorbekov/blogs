@@ -2,8 +2,8 @@ package new
 
 import (
 	"context"
-	"gitlab.com/blogs/internal/pkg"
-	"gitlab.com/blogs/internal/repository/postgres/new"
+	"github.com/blogs/internal/pkg"
+	"github.com/blogs/internal/repository/postgres/new"
 )
 
 type New interface {
