@@ -44,10 +44,10 @@ type AdminCreateResponse struct {
 }
 
 type AdminUpdateRequest struct {
-	Id      string  `json:"id" form:"id"`
-	Title   *string `json:"title" bun:"title"`
-	Content *string `json:"content" bun:"content"`
-	Author  *string `json:"author" bun:"author"`
+	Id      string `json:"id" form:"id"`
+	Title   string `json:"title" form:"title"`
+	Content string `json:"content" form:"content"`
+	Author  string `json:"author" form:"author"`
 }
 
 type AdminDetailResponseSwagger struct {

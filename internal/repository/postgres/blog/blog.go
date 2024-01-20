@@ -143,15 +143,15 @@ func (r Repository) AdminUpdate(ctx context.Context, request AdminUpdateRequest)
 	}
 	q := r.NewUpdate().Table("blogs").Where("deleted_at is null AND id = ?", request.Id)
 
-	if request.Title != nil {
+	if request.Title != "" {
 		q.Set("title = ?", request.Title)
 
 	}
-	if request.Content != nil {
+	if request.Content != "" {
 		q.Set("content = ?", request.Content)
 
 	}
-	if request.Author != nil {
+	if request.Author != "" {
 		q.Set("author = ?", request.Author)
 
 	}
